@@ -2,8 +2,10 @@
 import sys
 
 def main():
-    
-    if len(sys.argv) == 2:
+
+    if len(sys.argv) == 1:
+        print("0 arguments.")
+    elif len(sys.argv) == 2:
         print("1 argument:")
     else:
         print("{} arguments:".format(len(sys.argv) - 1))
