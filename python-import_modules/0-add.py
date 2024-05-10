@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-add = __import__("add_0").add
+from add_0 import add
 
 def main():
     a = 1
@@ -9,4 +9,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
