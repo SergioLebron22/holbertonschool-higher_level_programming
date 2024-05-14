@@ -5,5 +5,5 @@ def number_keys(a_dictionary):
 
     for k in a_dictionary:
         num_of_keys += 1
-    
+
     return num_of_keys
