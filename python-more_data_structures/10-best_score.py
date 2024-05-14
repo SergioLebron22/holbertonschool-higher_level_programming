@@ -16,5 +16,3 @@ def best_score(a_dictionary):
             best_key = k
 
     return best_key
-
-   
