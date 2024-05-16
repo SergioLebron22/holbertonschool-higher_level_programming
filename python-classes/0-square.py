@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+this file contains the Square class
+"""
 class Square:
     """
     A class representing a square.
@@ -11,4 +13,3 @@ class Square:
         None
     """
     pass
-
