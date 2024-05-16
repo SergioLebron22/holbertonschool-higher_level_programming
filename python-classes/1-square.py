@@ -9,7 +9,7 @@ class Square:
     A class representing a square.
 
     Attributes:
-        None
+        __size: size of the square
 
     Methods:
         None
