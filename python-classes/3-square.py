@@ -15,7 +15,7 @@ class Square:
         __init__(self, size=0): Initializes a Square object.
         area(self): Calculates the area of the square.
     """
-    
+
     def __init__(self, size=0):
         """
         Initializes a Square object.
