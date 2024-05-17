@@ -5,6 +5,17 @@ this file contains the Square class
 
 
 class Square:
+    """
+    Represents a square.
+
+    Attributes:
+        __size (int): The size of the square.
+
+    Methods:
+        __init__(self, size=0): Initializes a Square object.
+        area(self): Calculates the area of the square.
+    """
+    
     def __init__(self, size=0):
         """
         Initializes a Square object.
