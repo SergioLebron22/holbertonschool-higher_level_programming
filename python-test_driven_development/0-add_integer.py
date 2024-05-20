@@ -1,19 +1,13 @@
 #!/usr/bin/python3
+"""
+
+this file has function add integers
+
+"""
 
 def add_integer(a, b=98):
     """
-    Adds two integers and returns the sum.
-
-    Args:
-        a (int): The first integer.
-        b (int, optional): The second integer. Defaults to 98.
-
-    Returns:
-        int: The sum of the two integers.
-
-    Raises:
-        TypeError: If either `a` or `b` is not an integer.
-
+    This function adds a and b, if b is not passed, default is set to 98
     """
 
     if not isinstance(a, int) and not isinstance(a, float):
