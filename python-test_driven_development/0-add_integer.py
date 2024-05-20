@@ -5,6 +5,7 @@ this file has function add integers
 
 """
 
+
 def add_integer(a, b=98):
     """
     This function adds a and b, if b is not passed, default is set to 98
