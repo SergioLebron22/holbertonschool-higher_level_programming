@@ -56,3 +56,8 @@ test 8:
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("height", 20)
 
+test 9:
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", True)
+Traceback (most recent call last):
+TypeError: name must be an integer
