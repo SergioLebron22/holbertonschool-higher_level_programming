@@ -20,3 +20,15 @@ test 2:
 Traceback (most recent call last):
 ValueError: name must be greater than 0
 
+test 3:
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+test 4: 
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", 0)
+Traceback (most recent call last):
+ValueError: name must be greater than 0
