@@ -92,7 +92,8 @@ NameError: name 'name' is not defined
 Traceback (most recent call last):
 TypeError: name must be an integer
 
->>> isinstance(bg, BaseGeometry)
-True
-
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("age", "4")
+Traceback (most recent call last):
+TypeError: age must be an integer
 
