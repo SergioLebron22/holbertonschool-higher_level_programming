@@ -101,3 +101,8 @@ TypeError: age must be an integer
 >>> bg.integer_validator("name", sage)
 Traceback (most recent call last):
 NameError: name 'sage' is not defined
+
+>>> bg.integer_validator("name", object)
+Traceback (most recent call last):
+TypeError: name must be an integer
+
