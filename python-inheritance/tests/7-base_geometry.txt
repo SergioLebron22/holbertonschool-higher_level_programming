@@ -81,3 +81,16 @@ TypeError: name must be an integer
 >>> bg.integer_validator("name", ())
 Traceback (most recent call last):
 TypeError: name must be an integer
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator(name, 0)
+Traceback (most recent call last):
+NameError: name 'name' is not defined
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", 1)
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", "8")
+Traceback (most recent call last):
+TypeError: name must be an integer
