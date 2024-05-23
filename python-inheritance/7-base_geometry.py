@@ -8,14 +8,7 @@ This file contains class BaseGeometry
 class BaseGeometry:
     """
     This is the base class for geometry objects.
-
-    Methods:
-    - area(): Raises an exception indicating 
-    that the method is not implemented.
-    - integer_validator(name, value): Validates 
-    if the given value is an integer and greater than 0.
     """
-
     def area(self):
         raise Exception("area() is not implemented")
 
