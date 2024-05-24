@@ -8,9 +8,10 @@ class SwimMixin:
 class FlyMixin:
 
     def fly(self):
-        print("This crature flies!")
+        print("This creature flies!")
 
 class Dragon(SwimMixin, FlyMixin):
+
 
     def roar(self):
         print("This dragon roars!")
