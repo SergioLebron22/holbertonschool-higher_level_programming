@@ -21,12 +21,13 @@ class Circle(Shape):
         self.__radius = radius
 
     def area(self):
-        if self.__radius >= 0:
-            return pi * self.__radius ** 2
+        return pi * self.__radius ** 2
 
     def perimeter(self):
-        if self.__radius >= 0:
-            return 2 * pi * self.__radius
+        if self.__radius < 0:
+            raise ValueError
+
+        return 2 * pi * self.__radius
 
 
 class Rectangle(Shape):
