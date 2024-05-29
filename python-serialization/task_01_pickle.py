@@ -18,13 +18,13 @@ class CustomObject:
     def serialize(self, filename):
         try:
             pickle.dump(self, open(filename, "wb"))
-        except (FileNotFoundError, IsADirectoryError, IOError):
+        except (IOError, pickle.PicklingError):
             return None
 
     @classmethod
     def deserialize(cls, filename):
         try:
-            cls = pickle.load(open(filename, "rb"))
-            return cls
-        except (IsADirectoryError, IOError):
+            with open(filename, 'rb') as file:
+                return pickle.load(file)
+        except (FileNotFoundError, IOError, pickle.PicklingError):
             return None
