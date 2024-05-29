@@ -17,7 +17,7 @@ class CustomObject:
 
     def serialize(self, filename):
         try:
-            return pickle.dump(self, open(filename, "wb"))
+            pickle.dump(self, open(filename, "wb"))
         except (FileNotFoundError, IsADirectoryError, IOError):
             return None
 
