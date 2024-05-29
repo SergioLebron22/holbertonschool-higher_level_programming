@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 
 """
@@ -25,21 +24,22 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-            """
-            Retrieves a dictionary representation of a Student instance.
+        """
+        Retrieves a dictionary representation of a Student instance.
 
-            Args:
-                attrs (list): A list of attributes to include in the dictionary representation.
-                              If None, all attributes are included.
+        Args:
+            attrs (list): A list of attributes
+            to include in the dictionary representation.
+            If None, all attributes are included.
 
-            Returns:
-                dict: A dictionary representation of the Student instance.
-            """
-            if attrs is None:
-                return self.__dict__
-            else:
-                new_dict = {}
-                for name in attrs:
-                    if name in self.__dict__:
-                        new_dict[name] = self.__dict__[name]
-                return new_dict
+        Returns:
+            dict: A dictionary representation of the Student instance.
+        """
+        if attrs is None:
+            return self.__dict__
+        else:
+            new_dict = {}
+            for name in attrs:
+                if name in self.__dict__:
+                    new_dict[name] = self.__dict__[name]
+            return new_dict
