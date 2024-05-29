@@ -16,9 +16,15 @@ class CustomObject:
 {self.age}\nIs Student: {self.is_student}")
 
     def serialize(self, filename):
-        pickle.dump(self, open(filename, "wb"))
+        try:
+            return pickle.dump(self, open(filename, "wb"))
+        except (FileNotFoundError, IsADirectoryError, IOError):
+            return None
 
     @classmethod
     def deserialize(cls, filename):
-        cls = pickle.load(open(filename, "rb"))
-        return cls
+        try:
+            cls = pickle.load(open(filename, "rb"))
+            return cls
+        except (IsADirectoryError, IOError):
+            return None
