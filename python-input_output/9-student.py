@@ -4,6 +4,7 @@
 This file contains the class Student
 """
 
+
 class Student:
     """
     Represents a student with a first name, last name, and age.
