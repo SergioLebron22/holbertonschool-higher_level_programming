@@ -9,7 +9,7 @@ def fetch_and_print_posts():
 
     if response.status_code == 200:
         post = response.json()
-        print(f"Status code: {response.status_code}")
+        print(f"Status Code: {response.status_code}")
     
         for title in post:
             print(title['title'])
