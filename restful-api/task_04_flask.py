@@ -31,7 +31,7 @@ def get_user(username):
     
 @app.route('/add_user', methods=['POST'])
 def add_user():
-    if request.get_json is None:
+    if request.get_json() is None:
         abort(400, "Not a json")
     
     data = request.get_json()
