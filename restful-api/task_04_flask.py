@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from flask import Flask, jsonify, request #type: ignore
+from flask import Flask, jsonify, request, abort #type: ignore
 
 app = Flask(__name__)
 users = {"jane": {"username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"},
@@ -29,24 +29,26 @@ def get_user(username):
     
 @app.route('/add_user', methods=['POST'])
 def add_user():
+    if request.get_json is None:
+        abort(400, "Not a json")
+    
     data = request.get_json()
-    username = data.get("username")
-    name = data.get("name")
-    age = data.get("age")
-    city = data.get("city")
-
-    if not username or not name or not age or not city:
-        return jsonify({"error": "Username, name, age, city are requierd"}), 400
+    if "username" not in data:
+        return jsonify({"error": "Username is required"}), 400
     
-    if username in users:
-        return jsonify({"error": "User already exists"}), 400
-    
-    users[username] = {
-        "name": name,
-        "age": age,
-        "city": city
+    users[data["username"]] = {
+        "name": data["name"],
+        "age": data["age"],
+        "city": data["city"]
     }
-    return jsonify({"message": "User added", "user": users[username]})
+
+    output = {
+        "username": data["username"],
+        "name": data["name"],
+        "age": data["age"],
+        "city": data["city"]
+    }
+    return jsonify({"message": "User added", "user": output}), 201
     
 
 if __name__ == "__main__":
