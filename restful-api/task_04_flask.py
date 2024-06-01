@@ -25,7 +25,7 @@ def get_user(username):
         jsonify({"error": "User not found"}), 404
 
     user = users[username]
-    user[username] = username
+    user["username"] = username
 
     return jsonify(user)
 
