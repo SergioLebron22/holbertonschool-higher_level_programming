@@ -27,9 +27,6 @@ def get_user(username):
     
 @app.route('/add_user', methods=['POST'])
 def add_user():
-    if request.get_json() is None:
-        abort(400, "Not a json")
-    
     data = request.get_json()
     username = data.get("username")
 
@@ -37,7 +34,7 @@ def add_user():
         return jsonify({"error": "username is required"}), 400
     
     if username in users:
-        return jsonify({"error": "usrname already exists"}), 400
+        return jsonify({"error": "username already exists"}), 400
     
     users[username] = data
     return jsonify({"message": "User added", "user": data}), 201
