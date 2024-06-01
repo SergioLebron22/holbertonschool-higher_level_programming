@@ -20,7 +20,7 @@ users = {
 @auth.verify_password
 def verify_password(username, password):
     user = users.get(username)
-    if user and check_password_hash(users.get(username), password):
+    if user and check_password_hash(user["password"], password):
         return user
     return None
 
