@@ -1,7 +1,14 @@
 #!/usr/bin/python3
 
+"""
+This script retrieves cities from a MySQL database
+based on a given state name.
+"""
+
+
 import MySQLdb
 import sys
+
 
 if __name__ == "__main__":
 
