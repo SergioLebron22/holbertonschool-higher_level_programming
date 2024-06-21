@@ -18,7 +18,10 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    
+
+    if session.query(State).first() is None:
+        print("Nothing")
+
     state_id = session.query(State).first().id
     state_name = session.query(State).first().name
     print("{}: {}".format(state_id, state_name))
