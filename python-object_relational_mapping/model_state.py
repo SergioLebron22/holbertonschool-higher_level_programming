@@ -12,6 +12,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
+
 class State(Base):
     """
     Represents a state in the database.
@@ -22,5 +23,6 @@ class State(Base):
     """
     __tablename__ = 'states'
 
-    id = Column('id', Integer, unique=True, autoincrement=True, nullable=False, primary_key=True)
+    id = Column('id', Integer, unique=True,
+                autoincrement=True, nullable=False, primary_key=True)
     name = Column('name', String(128), nullable=False)
