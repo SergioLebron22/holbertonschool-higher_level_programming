@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 
 """
-This script retrieves a State object from
-the database based on the given state name.
-If the state is found, it prints the state's ID.
-Otherwise, it prints "Not found".
+This script updates the name of a state in the database.
 """
 
 import sys
