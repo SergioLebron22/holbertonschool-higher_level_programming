@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items List</title>
+</head>
+<body>
+    {% include "header.html" %}
+
+    <h1>Items List</h1>\
+    
+    <ul>
+    {% if not items %}No items found{% endif %}    
+    {% for item, value in items.items() %}
+        <li>{{item}}: {{value}}</li>
+    {% endfor %}
+    </ul>
+    
+
+    {% include "footer.html" %}
+</body>
+</html>
